@@ -53,7 +53,7 @@ public class LabRequestController {
     @PreAuthorize("hasAnyRole('TESTER')")
     public List<TestRequest> getForTests()  {
 
-
+        //returns the list of test requests assigned to current tester
        return testRequestQueryService.findBy(RequestStatus.INITIATED);
 
 
